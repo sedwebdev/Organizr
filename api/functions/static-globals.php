@@ -106,7 +106,7 @@ function languagePacks($encode = false)
 		}
 	}
 	usort($files, function ($a, $b) {
-		return $a['language'] <=> $b['language'];
+		return $a['language'] <= $b['language'];
 	});
 	return ($encode) ? json_encode($files) : $files;
 }
